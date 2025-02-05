@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hans' Full-Stack Developer Portfolio</title>
+    <meta name="description"
+        content="Explore the portfolio of Hans, a full-stack developer with expertise in HTML, CSS, JavaScript, React, Node.js, and more. Discover projects, skills, and contact information.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header id="home" role="banner">
+        <h1>Welcome to My Standard HTML Page</h1>
+        <nav role="navigation" aria-label="Main Navigation">
+            <div class="hamburger" id="hamburger">
+                &#9776;
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main role="main">
+        <section id="about" role="region" aria-labelledby="about-heading">
+            <h2 id="about-heading">About Me</h2>
+            <p>Hello! I am Hans, a full-stack developer with a passion for creating dynamic and responsive web
+                applications. I have experience in various web technologies and enjoy learning new skills to enhance my
+                development capabilities.</p>
+        </section>
+        <section id="projects" role="region" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Projects</h2>
+            <section id="filter" role="region" aria-labelledby="filter-heading">
+                <!-- <h3 id="filter-heading">Filter Projects</h3> -->
+                <label for="category-select">Choose a category to filter projects:</label>
+                <select id="category-select" name="category">
+                    <option value="all">All</option>
+                    <option value="frontend">Frontend</option>
+                    <option value="backend">Backend</option>
+                </select>
+            </section>
+            <article class="project-card" role="article" data-category="frontend all">
+                <h3>Project One</h3>
+                <figure>
+                    <img src="images/project.jpg" alt="Screenshot of Project One showing a web application interface">
+                    <figcaption>Project One Description</figcaption>
+                </figure>
+                <p>This is a brief description of Project One. It showcases my skills in HTML, CSS, and JavaScript.</p>
+            </article>
+            <article class="project-card" role="article" data-category="backend all">
+                <h3>Project Two</h3>
+                <figure>
+                    <img src="images/project.jpg" alt="Screenshot of Project Two showing a backend server setup">
+                    <figcaption>Project Two Description</figcaption>
+                </figure>
+                <p>This is a brief description of Project Two. It highlights my experience with backend development
+                    using Node.js and Express.</p>
+            </article>
+            <article class="project-card" role="article" data-category="frontend all">
+                <h3>Project Three</h3>
+                <figure>
+                    <img src="images/project.jpg" alt="Screenshot of Project Three showing a responsive web design">
+                    <figcaption>Project Three Description</figcaption>
+                </figure>
+                <p>This is a brief description of Project Three. It demonstrates my ability to create responsive designs
+                    using CSS frameworks like Bootstrap.</p>
+            </article>
+        </section>
+        <section id="skills" role="region" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Skills</h2>
+            <ul>
+                <li>HTML & CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>MongoDB</li>
+                <li>Git & GitHub</li>
+                <li>Responsive Web Design</li>
+                <li>RESTful APIs</li>
+                <li>Agile Methodologies</li>
+            </ul>
+        </section>
+        <section id="contact" role="region" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact Me</h2>
+            <form action="/submit-form" method="post">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 My Website</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

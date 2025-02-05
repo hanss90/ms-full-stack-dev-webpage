@@ -1,0 +1,335 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem 0px 0px 0px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 2rem;
+}
+
+nav {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Chrome */
+    display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    justify-content: space-between;
+    background-color: #333;
+    height: 3.125rem;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    /* font-weight: bold; */
+    /* font-size: 1.25em; */
+    width: 100%;
+    justify-content: space-around;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    padding: 0.875rem 1.25rem;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.875rem;
+    cursor: pointer;
+    color: white;
+    padding: 0.875rem 1.25rem;
+    margin-left: auto;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+#about {
+    text-align: center;
+    font-size: 1.2em;
+    padding: 1.25rem;
+    margin: 1.25rem auto;
+    margin-bottom: 3.75rem;
+    max-width: 90%;
+    line-height: 1.6;
+}
+
+#projects {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+    padding: 1.25rem;
+    margin: 1.25rem auto;
+    margin-bottom: 3.75rem;
+    max-width: 90%;
+}
+
+#projects-heading {
+    width: 100%;
+    text-align: center;
+    /* margin-bottom: 1.25rem; */
+}
+
+/* #filter-heading {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.25rem;
+} */
+
+#filter {
+    width: 100%;
+    text-align: center;
+    /* margin-bottom: 1.25rem; */
+    /* padding: 1.25rem; */
+}
+
+.project-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.25rem;
+    margin: 0.625rem;
+    -webkit-flex: 1 1 calc(33.333% - 2.5rem);
+    -moz-flex: 1 1 calc(33.333% - 2.5rem);
+    -ms-flex: 1 1 calc(33.333% - 2.5rem);
+    flex: 1 1 calc(33.333% - 2.5rem);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.project-card h3 {
+    margin-top: 0;
+}
+
+.project-card p {
+    color: #666;
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+#skills {
+    list-style: none;
+    padding: 0;
+    margin: 1.25rem auto;
+    margin-bottom: 3.75rem;
+    max-width: 90%;
+    text-align: left;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#skills li {
+    list-style: none;
+    font-size: 1.2em;
+    padding: 0.625rem 0;
+    position: relative;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 25rem;
+}
+
+#skills li::before {
+    content: '✔️';
+    margin-right: 0.625rem;
+    color: #4CAF50;
+}
+
+#contact {
+    max-width: 50%;
+    margin: 0 auto;
+    margin-bottom: 3.75rem;
+    padding: 1.25rem;
+    background-color: #fff;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact form {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact form div {
+    margin-bottom: 0.9375rem;
+}
+
+#contact label {
+    font-weight: bold;
+    margin-bottom: 0.3125rem;
+    display: block;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+    width: 100%;
+    padding: 0.625rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+#contact button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.625rem 1.25rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#contact button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.25rem;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .project-card {
+        -webkit-flex: 1 1 calc(50% - 2.5rem);
+        -moz-flex: 1 1 calc(50% - 2.5rem);
+        -ms-flex: 1 1 calc(50% - 2.5rem);
+        flex: 1 1 calc(50% - 2.5rem);
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+    }
+
+    nav ul.show {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card {
+        -webkit-flex: 1 1 100%;
+        -moz-flex: 1 1 100%;
+        -ms-flex: 1 1 100%;
+        flex: 1 1 100%;
+    }
+
+    nav {
+        flex-direction: column;
+        height: auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav a {
+        padding: 0.625rem;
+    }
+}
